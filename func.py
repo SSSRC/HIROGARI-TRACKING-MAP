@@ -33,7 +33,7 @@ import time
 import requests
 
 def get_tle(cat_id='47930'):
-    url = "https://celestrak.com/satcat/tle.php?CATNR=47930"
+    url = "https://celestrak.com/satcat/tle.php?CATNR=" + cat_id
     r = requests.post(url)
     TLE = r.text.split("\r\n")[:3]
     return TLE
